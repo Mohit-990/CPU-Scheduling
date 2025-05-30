@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(120deg, #d3e3f4 0%, #dbe7f4 100%);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+#processForm {
+    margin-bottom: 24px;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 4px rgba(33,150,243,0.04);
+}
+
+
+canvas {
+    border: 1px solid #000;
+}
+
+
+.h1-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #9bc5e3 60%, #a0bcd3 100%);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(33,150,243,0.10);
+    padding: 24px 0 18px 0;
+    margin-bottom: 28px;
+    border: 1.5px solid #90caf9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #053c72;
+}
+
+input[type=number] {
+    width: 90px;
+    margin-right: 12px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: 1px solid #b0bec5;
+    font-size: 15px;
+    background: #f4f6f8;
+    transition: border 0.2s;
+}
+
+input[type=number]:focus, select:focus {
+    border: 1.5px solid #1976d2;
+    outline: none;
+    background: #e3f2fd;
+}
+
+select {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.08);
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+    background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+  
+#processInputs {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 14px;
+}
+
+.process-row {
+    background: white;
+    padding: 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(33,150,243,0.06);
+    transition: box-shadow 0.2s;
+}
+
+.process-row:hover {
+    box-shadow: 0 4px 16px rgba(33,150,243,0.13);
+}
+
+.process-row label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#algorithms {
+    margin-bottom: 18px;
+}
+
+#roundRobinQuantumContainer {
+    display: none;
+    margin-top: 12px;
+}
+
+#results {
+    margin-top: 36px;
+  }
+
+#ganttChart {
+    margin-top: 28px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+.gantt-bar {
+    display: inline-block;
+    height: 34px;
+    margin-right: 3px;
+    border-radius: 7px 7px 0 0;
+    position: relative;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    line-height: 34px;
+    font-size: 15px;
+    user-select: none;background: linear-gradient(90deg, #1976d2 70%, #64b5f6 100%);
+    box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+    min-width: 60px;
+    transition: background 0.2s;
+}
+
+.gantt-bar:hover {
+    background: linear-gradient(90deg, #1565c0 70%, #42a5f5 100%);
+}
+
+.gantt-time {
+    font-size: 13px;
+    text-align: center;
+    padding-top: 4px;
+    color: #555;
+    user-select: none;
+  }
+
+.info-box {
+ 
+    margin: 18px auto 0 auto;
+    background: #e3f2fd;
+    padding: 18px 20px;
+    border-radius: 8px;
+    border: 1px solid #90caf9;
+    color: #1565c0;
+    max-width: 700px;
+    font-size: 1.08em;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.07);
+}
+
+
+
+@media (max-width: 900px) {
+    #ganttChart {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px 2vw 18px 2vw;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    #processInputs {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .process-row {
+        padding: 10px 8px;
+    }
+    .info-box {
+        font-size: 0.98em;
+        padding: 10px 8px;
+    }
+    .gantt-bar {
+        font-size: 12px;
+        min-width: 40px;
+        height: 26px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1em;
+    }
+}
